@@ -253,8 +253,13 @@ namespace MyProject
 							{
 								var path = NSBundle.MainBundle.BundleUrl.AbsoluteString + "07_ObtainPoiData_1_FromApplicationModel/index.html";
 								loadingArchitectWorldNavigation = architectView.LoadArchitectWorldFromURL(NSUrl.FromString(path), Wikitude.Architect.WTFeatures.WTFeature_ImageTracking);
+								
+								// ************************ The problem is here!!!!!!!!
+								
 								//this.architectView.CallJavaScript("passData(" + json +")");
 								this.architectView.CallJavaScript("World.loadPoisFromJsonData(" + json + ");");
+							        
+								// ************************
 							}
 
 						}
