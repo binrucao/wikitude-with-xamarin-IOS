@@ -11,7 +11,7 @@ using System.Dynamic;
 using System.Web;
 
 
-namespace IndoorNavigationProject1
+namespace MyProject
 {
 	public partial class ArchitectViewDelegate : WTArchitectViewDelegate
 	{
@@ -53,9 +53,6 @@ namespace IndoorNavigationProject1
 
 		private bool authorized = false;
 
-		//public string WorldOrUrl { get; private set; }
-		//public bool IsUrl { get; private set; }
-		//public CLLocationManager _cllocaionManager;
 		public MyARViewController(IntPtr handle) : base(handle)
 		{
 			
@@ -107,12 +104,12 @@ namespace IndoorNavigationProject1
 			generateThePath = new GenerateThePath();
 			var path = generateThePath.loadThePath(end, vertexes2);
 			json = JsonConvert.SerializeObject(selectedDestination);
-      // *** for example the json = [{"name":"West Entrance","id":23,"distance":9999.0,"latitude":"42.3917031848521","longitude":"-72.5273525342345","floor":2},
+      /* *** for example the json = [{"name":"West Entrance","id":23,"distance":9999.0,"latitude":"42.3917031848521","longitude":"-72.5273525342345","floor":2},
                                      {"name":"helpNode_1","id":1001,"distance":9999.0,"latitude":"42.39177128009","longitude":"-72.5271138176322","floor":2},
                                      {"name":"helpNode_2","id":1002,"distance":9999.0,"latitude":"42.39177128009","longitude":"-72.5270564854145","floor":2},
                                      {"name":"Women's Restroom Main Floor","id":27,"distance":9999.0,"latitude":"42.3916895657956","longitude":"-72.5270045176148","floor":2}]
       
-      
+      */
 			this.architectView = new WTArchitectView();
 			this.architectView.Delegate = architectViewDelegate;
 			this.architectView.ShouldAuthorizeRestrictedAPIs = false;
@@ -257,7 +254,7 @@ namespace IndoorNavigationProject1
 								var path = NSBundle.MainBundle.BundleUrl.AbsoluteString + "07_ObtainPoiData_1_FromApplicationModel/index.html";
 								loadingArchitectWorldNavigation = architectView.LoadArchitectWorldFromURL(NSUrl.FromString(path), Wikitude.Architect.WTFeatures.WTFeature_ImageTracking);
 								//this.architectView.CallJavaScript("passData(" + json +")");
-                this.architectView.CallJavaScript("World.loadPoisFromJsonData(" + json + ");");
+								this.architectView.CallJavaScript("World.loadPoisFromJsonData(" + json + ");");
 							}
 
 						}
