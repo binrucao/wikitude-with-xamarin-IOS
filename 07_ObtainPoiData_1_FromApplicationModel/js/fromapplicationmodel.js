@@ -66,10 +66,10 @@ var World = {
 
 	// location updates, fired every time you call architectView.setLocation() in native environment
 	locationChanged: function locationChangedFn(lat, lon, alt, acc) {
-		if (!World.initiallyLoadedData) {
-		    World.requestDataFromLocal(lat, lon);
-			World.initiallyLoadedData = true;
-		}
+// 		if (!World.initiallyLoadedData) {
+// 		    World.requestDataFromLocal(lat, lon);
+// 			World.initiallyLoadedData = true;
+// 		}
 	},
 
 	// fired when user pressed maker in cam
@@ -96,117 +96,12 @@ var World = {
 	},
 
 	// request POI data
-	requestDataFromLocal: function requestDataFromLocalFn(centerPointLatitude, centerPointLongitude) {
-	//requestDataFromLocal: function requestDataFromLocalFn() {
+// 	requestDataFromLocal: function requestDataFromLocalFn(centerPointLatitude, centerPointLongitude) {
 
-		var poiData = [];
+// 		var poiData = [];
 
-		poiData.push({
-            "id": 17,
-		    "latitude": 42.3918572037939,
-			"longitude": -72.5266739353538,
-			"description": ("East Entrance"),
-			"altitude": "3.0",
-			"name": "East Entrance" 
-		});
-		//poiData.push({
-  //          "id": 00,
-		//    "latitude": centerPointLatitude,
-		//	"longitude": centerPointLongitude5,
-		//	"description": ("Here"),
-		//	"altitude": "3.0",
-		//	"name": "Here" 
-		//});
-		poiData.push({
-            "id": 19,
-		    "latitude": 42.3918886513449,
-			"longitude": -72.5268563255668,
-			"description": ("Harvest Market"),
-			"altitude": "3.0",
-			"name": "Harvest Market" 
-		});
-		poiData.push({
-            "id": 21,
-		    "latitude": 42.3918282324141,
-			"longitude": -72.5271138176322,
-			"description": ("Information Desk"),
-			"altitude": "3.0",
-			"name": "Information Desk" 
-		});
-		poiData.push({
-            "id": 22,
-		    "latitude": 42.3917900991245,
-			"longitude": -72.5272868201137,
-			"description": ("UStore"),
-			"altitude": "3.0",
-			"name": "UStore" 
-		});
-		poiData.push({
-            "id": 23,
-		    "latitude": 42.3917031848521,
-			"longitude": -72.5273525342345,
-			"description": ("West Entrance"),
-			"altitude": "3.0",
-			"name": "West Entrance" 
-		});
-		poiData.push({
-            "id": 26,
-		    "latitude": 42.3917002134218,
-			"longitude": -72.526957243681,
-			"description": ("Men's Restroom Main Floor"),
-			"altitude": "3.0",
-			"name": "Men's Restroom Main Floor" 
-		});
-		poiData.push({
-            "id": 27,
-		    "latitude": 42.3916895657956,
-			"longitude": -72.5270045176148,
-			"description": ("Women's Restroom Main Floor"),
-			"altitude": "3.0",
-			"name": "Women's Restroom Main Floor" 
-		});
-		poiData.push({
-            "id": 28,
-		    "latitude": 42.3916650514865,
-			"longitude": -72.5269686430693,
-			"description": ("Stairs Main Floor"),
-			"altitude": "3.0",
-			"name": "Stairs Main Floor" 
-		});
-		poiData.push({
-            "id": 29,
-		    "latitude": 42.39177128009,
-			"longitude": -72.526867389679,
-			"description": ("Cafe"),
-			"altitude": "3.0",
-			"name": "Cafe" 
-		});
-		poiData.push({
-            "id": 30,
-		    "latitude": 42.3917836610344,
-			"longitude": -72.5267047807574,
-			"description": ("Blue Wall"),
-			"altitude": "3.0",
-			"name": "Blue Wall" 
-		});
-		poiData.push({
-            "id": 526,
-		    "latitude": 42.3918767656582,
-			"longitude": -72.5270564854145,
-			"description": ("Escalator Main Floor"),
-			"altitude": "3.0",
-			"name": "Escalator Main Floor" 
-		});
-		poiData.push({
-            "id": 49,
-		    "latitude": 42.3917311658133,
-			"longitude": -72.527086995542,
-			"description": ("Elevator Main Floor"),
-			"altitude": "3.0",
-			"name": "Elevator Main Floor" 
-		});
-		World.loadPoisFromJsonData(poiData);
-	}
+// 		World.loadPoisFromJsonData(poiData);
+// 	}
 
 };
 
